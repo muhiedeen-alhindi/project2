@@ -7,6 +7,7 @@ window.onload=function(){
  signin_btn.addEventListener("click",function(){
 
     title.innerHTML="sign in"
+    
     })
 signup_btn.addEventListener("click",function(){
 
