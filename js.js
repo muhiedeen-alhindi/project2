@@ -41,13 +41,17 @@ signup_btn.addEventListener("click",function(){
         
         })
         email.addEventListener("blur", function(){
-            if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+            
+            if(!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/.test(email.value)){
                         alert("use like this form muhie@live.com ")
                      }
         
-        })
-       
-    
+        })  
+                 
+                      
+        
+          
+     
          
             
           }
