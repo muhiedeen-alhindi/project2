@@ -19,12 +19,29 @@ window.onload=function(){
         div_user.style.display="none";
         div_date.style.display="none"
         
+        
     })
 signup_btn.addEventListener("click",function(){
        signup_btn.style.backgroundColor="blue"
         title.innerHTML="sign up"
+        // signup_btn.disabled = true;
+        
+        
         })
 
+       
+        password.addEventListener("blur", function(){
+            if(password.value.length<8){
+                alert("password should  minimum 8  character long")
+            }else if (!/^[A-Z]/.test(password.value)) {
+                alert("Password must start with an uppercase letter.");
+              }
+        
+        })
+       
+    
+          
+            
+          }
  
-}
 
