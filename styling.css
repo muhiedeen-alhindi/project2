@@ -52,3 +52,9 @@ button{
     cursor: not-allowed;
     opacity: 1;
  }
+ //  email.addEventListener("blur",function()
+ //  {
+ //      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+ //         alert("fuck u")
+ //      }
+ //  })

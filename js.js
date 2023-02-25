@@ -7,7 +7,9 @@ window.onload=function(){
  let div_date=document.getElementById("date")
  let email=document.getElementById("email")
  let password=document.getElementById("password")
- console.log(password)
+ let form=document.getElementById("id")
+ console.log(form)
+ 
  
 
  signin_btn.addEventListener("click",function(){
@@ -38,9 +40,15 @@ signup_btn.addEventListener("click",function(){
               }
         
         })
+        email.addEventListener("blur", function(){
+            if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+                        alert("use like this form muhie@live.com ")
+                     }
+        
+        })
        
     
-          
+         
             
           }
  
