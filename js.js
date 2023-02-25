@@ -5,6 +5,9 @@ window.onload=function(){
  let div_name=document.getElementById("reg-form")
  let div_user=document.getElementById("username")
  let div_date=document.getElementById("date")
+ let email=document.getElementById("email")
+ let password=document.getElementById("password")
+ console.log(password)
  
 
  signin_btn.addEventListener("click",function(){
@@ -22,5 +25,6 @@ signup_btn.addEventListener("click",function(){
         title.innerHTML="sign up"
         })
 
-
+ 
 }
+
