@@ -60,3 +60,7 @@ button{
  form{
     height: 100vh;
  }
+ #function {
+    height: 100vh;
+    margin-left: 30%;
+ }
