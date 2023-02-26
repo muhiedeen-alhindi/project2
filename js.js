@@ -206,7 +206,7 @@ function isPalindrome(s) {
     let reverse_text=document.getElementById("rev-word-output")
      function reverseWord(w){
         if(w.length ==0){
-            return w+"ay"
+            return w
         }
         if(w.length ==1){
             return   w;
@@ -246,7 +246,7 @@ function isPalindrome(s) {
 let x = 0;  
 let y = 0;  
 let dx = 2;  
-let dy = 5;  
+let dy = 4;  
 
 function moveingBall() {
   x += dx;
@@ -312,7 +312,5 @@ async function getIPAddress() {
     window.location.href = "index.html";
   });
   
-
-   
  
 
