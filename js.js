@@ -174,6 +174,35 @@ function isPalindrome(s) {
         birth_year.innerHTML="prime"
     }
   })
+  class Course {
+    constructor(course_name,instructor_name,course_code,course_time){
+    this.course_name=course_name;
+    this.course_code=course_code;
+    this.course_time=course_time;
+    this.instructor_name=instructor_name;}
+}
+    const course_name =document.getElementById("course_name")
+    const  course_code=document.getElementById("course_code")
+    const   course_time=document.getElementById("course_time")
+    const instructor_name=document.getElementById("instructor_name")
+    const btn_form2=document.getElementById("submit_form2")
+
+
+    btn_form2.addEventListener("click",function(e){
+        e.preventDefault();
+        const course = new Course(
+            course_name.value,
+            course_time.value,
+            instructor_name.value,
+            course_code.value,
+           
+            )
+
+            console.log(course)   
+    }
+    );
+
+   
            
             
        
