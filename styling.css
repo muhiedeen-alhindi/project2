@@ -64,3 +64,11 @@ button{
     height: 100vh;
     margin-left: 30%;
  }
+ .form2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:30px;
+ }
+ 
