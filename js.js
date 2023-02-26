@@ -269,6 +269,24 @@ function moveingBall() {
 }
 
 moveingBall();
+async function getIPAddress() {
+    const response = await fetch('https://api.ipify.org/?format=json');
+    const data = await response.json();
+    return data.ip;
+  }
+  
+  let btn_ip = document.getElementById("ip");
+  let ip_address = document.getElementById("ip-adress");
+  
+  btn_ip.addEventListener("click", function() {
+    getIPAddress().then(function(ip) {
+      ip_address.innerHTML = ip;
+    }).catch(function(error) {
+      console.error(error);
+    });
+  });
+  
 
+   
  
 
