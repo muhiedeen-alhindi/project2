@@ -241,5 +241,34 @@ function isPalindrome(s) {
         text_ay_output.innerHTML=addAyAndFirstLetter(text_ay.value);
     })
     
+    let ball = document.getElementById('ball');
+
+let x = 0;  
+let y = 0;  
+let dx = 3;  
+let dy = 2;  
+
+function moveingBall() {
+  x += dx;
+  y += dy;
+
+  
+  if (x + ball.clientWidth > window.innerWidth || x < 0) {
+     
+  }
+
+   
+  if (y + ball.clientHeight > window.innerHeight || y < 0) {
+    dy = -dy;  
+  }
+
+  ball.style.left = x + 'px';  
+  ball.style.top = y + 'px';  
+
+  requestAnimationFrame(moveingBall);
+}
+
+moveingBall();
+
  
 
