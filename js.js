@@ -202,6 +202,19 @@ function isPalindrome(s) {
     }
     );
 
+    let  normal_text=document.getElementById("reverse-word") 
+    let reverse_text=document.getElementById("rev-word-output")
+     function reverseWord(w){
+        if(w.length<=1){
+            return w;
+        }
+        return reverseWord(w.substr(1))+w[0]
+
+
+     }
+     let x=reverseWord("hello")
+     console.log(x)
+
    
            
             
