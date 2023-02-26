@@ -9,7 +9,7 @@
  let password=document.getElementById("password")
  let form=document.getElementById("id")
  let input_palindrom=document.getElementById( "palindrom")
- console.log(input_palindrom)
+//  console.log(input_palindrom)
  
  
 
@@ -157,6 +157,23 @@ function isPalindrome(s) {
       return isPalindrome(s.substr(1, s.length - 2));
     }
   }
+
+  let age_prime=document.getElementById("user_age")
+  age_prime.addEventListener("blur",function(){
+   
+    let birth_year=document.getElementById("birth-year")
+    let year =Number(age_prime.value);
+    if(year%2===0){
+         
+        
+        console.log(birth_year)
+        birth_year.innerHTML="not prime"
+    }
+    else{
+         
+        birth_year.innerHTML="prime"
+    }
+  })
            
             
        
