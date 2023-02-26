@@ -294,6 +294,7 @@ async function getIPAddress() {
         let n= Number(z[i])
         if(n%2==0){
             total_even +=n
+            ip_address.innerHTML = ip+" "+"sume of even"+"="+total_even
 
         }
 
