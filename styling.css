@@ -3,7 +3,7 @@ body{
     padding: 0px;
     background-color: rgb(63, 222, 243);
     font-family: sans-serif;
-   
+ 
     
 }
 .container{
@@ -12,10 +12,24 @@ body{
      justify-content: flex-start;
      align-content: center;
     gap: 30px;
-   
-     
-      
 }
+   
+.register-form   {
+     width: auto;
+      
+    }
+      
+    .first-page{
+       display: flex;
+       flex-direction: column;
+        background-color: aqua;
+        margin: auto;
+        border: 2px red solid;
+        width: fit-content;
+        height: max-content;
+        
+    }
+
 h1{
 text-align: center;
 }
@@ -79,4 +93,7 @@ button{
    align-items: center;
    gap: 50px
 
+ }
+ h1{
+    background-color: ;
  }
