@@ -79,9 +79,49 @@ signup_btn.addEventListener("click",function(){
           console.log(formData); // display JSON object in console
         });
         
+        function runMergeSort() {
+            // Prompt the user to enter 10 numbers using prompt()
+           let numbers = [];
+            for (var i = 0; i < 3; i++) {
+               prompt('Enter a number:'+ (i+1)+":");
+               let number=(i+1);
+               numbers.push(Number(number));
+            }
+      
+           
+            function mergeSort(array) {
+              if (array.length <= 1) {
+                return array;
+              }
+      
+              
+              var mid = Math.floor(array.length / 2);
+              var left = array.slice(0, mid);
+              var right = array.slice(mid);
        
-        
- 
+              var sortedLeft = mergeSort(left);
+              var sortedRight = mergeSort(right);
+      
+              
+              var merged = [];
+              var leftIndex = 0;
+              var rightIndex = 0;
+              while (leftIndex < sortedLeft.length && rightIndex < sortedRight.length) {
+                if (sortedLeft[leftIndex] < sortedRight[rightIndex]) {
+                  merged.push(sortedLeft[leftIndex]);
+                  leftIndex++;
+                } else {
+                  merged.push(sortedRight[rightIndex]);
+                  rightIndex++;
+                }
+              }
+              return merged.concat(sortedLeft.slice(leftIndex)).concat(sortedRight.slice(rightIndex));
+            }
+      
+            
+            var sortedNumbers = mergeSort(numbers);
+            console.log(sortedNumbers);
+          }
      
          
             
