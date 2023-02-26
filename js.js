@@ -140,8 +140,15 @@ checkButton.addEventListener("click", function() {
    
   let str = document.getElementById("palindrom").value;
  
-  
-  function isPalindrome(s) {
+  isPalindrome(str) 
+  let output = document.getElementById("output");
+  if (isPalindrome(str)) {
+    return output.innerHTML =  str + '" is a palindrome.';
+  } else {
+    return output.innerHTML =  str + '" is not a palindrome.';
+  }
+});
+function isPalindrome(s) {
     if (s.length <= 1) {
       return true;
     } else if (s.charAt(0) !== s.charAt(s.length - 1)) {
@@ -150,16 +157,6 @@ checkButton.addEventListener("click", function() {
       return isPalindrome(s.substr(1, s.length - 2));
     }
   }
-
-   
-  let output = document.getElementById("output");
-  if (isPalindrome(str)) {
-    output.innerHTML =  str + '" is a palindrome.';
-  } else {
-    output.innerHTML =  str + '" is not a palindrome.';
-  }
-});
-
            
             
        
