@@ -205,8 +205,12 @@ function isPalindrome(s) {
     let  normal_text=document.getElementById("reverse-word") 
     let reverse_text=document.getElementById("rev-word-output")
      function reverseWord(w){
-        if(w.length<=1){
-            return w;
+        if(w.length ==0){
+            return w+"ay"
+        }
+        if(w.length ==1){
+            return   w;
+        
         }
         return reverseWord(w.substr(1))+w[0]
 
@@ -220,11 +224,15 @@ function isPalindrome(s) {
        reverse_text.innerHTML=z;
        
       });
-    //  let x=reverseWord("hello")
-    //  console.log(x)
 
-   
-           
+
+
+    function addAyAndFirstLetter(s){
+        let x =(s.substr(1,s.length)+s[0]+"ay")
+        console.log(x)
+
+    }
+    addAyAndFirstLetter("banana")   
             
        
  
