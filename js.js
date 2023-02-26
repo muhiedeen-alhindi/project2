@@ -228,12 +228,18 @@ function isPalindrome(s) {
 
 
     function addAyAndFirstLetter(s){
-        let x =(s.substr(1,s.length)+s[0]+"ay")
-        console.log(x)
+        return (s.substr(1,s.length)+s[0]+"ay")
+       
 
     }
-    addAyAndFirstLetter("banana")   
+  
             
-       
+    let text_ay=document.getElementById("ay-word")
+    let text_ay_output=document.getElementById("ay-word-output")
+    text_ay.addEventListener("blur",function(){
+   
+        text_ay_output.innerHTML=addAyAndFirstLetter(text_ay.value);
+    })
+    
  
 
