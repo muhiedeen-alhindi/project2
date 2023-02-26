@@ -212,8 +212,16 @@ function isPalindrome(s) {
 
 
      }
-     let x=reverseWord("hello")
-     console.log(x)
+
+
+      normal_text.addEventListener("blur",function(){
+       let x=normal_text.value
+       z=reverseWord(x)
+       reverse_text.innerHTML=z;
+       
+      });
+    //  let x=reverseWord("hello")
+    //  console.log(x)
 
    
            
