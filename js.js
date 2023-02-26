@@ -8,7 +8,8 @@
  let email=document.getElementById("email")
  let password=document.getElementById("password")
  let form=document.getElementById("id")
- console.log(form)
+ let input_palindrom=document.getElementById( "palindrom")
+ console.log(input_palindrom)
  
  
 
@@ -82,7 +83,7 @@ signup_btn.addEventListener("click",function(){
         function runMergeSort() {
             // Prompt the user to enter 10 numbers using prompt()
            let numbers = [];
-            for (var i = 0; i < 3; i++) {
+            for (var i = 0; i < 10; i++) {
                prompt('Enter a number:'+ (i+1)+":");
                let number=(i+1);
                numbers.push(Number(number));
@@ -122,8 +123,44 @@ signup_btn.addEventListener("click",function(){
             var sortedNumbers = mergeSort(numbers);
             console.log(sortedNumbers);
           }
-     
-         
+
+           function checkPlaindrom(text){
+            if(text.length<=1){
+                return true;
+            }
+             i--;
+             return checkPlaindrom(text)+text[i]
+
+             }
+             
+var checkButton = document.getElementById("check-button");
+
+ 
+checkButton.addEventListener("click", function() {
+   
+  let str = document.getElementById("palindrom").value;
+ 
+  
+  function isPalindrome(s) {
+    if (s.length <= 1) {
+      return true;
+    } else if (s.charAt(0) !== s.charAt(s.length - 1)) {
+      return false;
+    } else {
+      return isPalindrome(s.substr(1, s.length - 2));
+    }
+  }
+
+   
+  let output = document.getElementById("output");
+  if (isPalindrome(str)) {
+    output.innerHTML =  str + '" is a palindrome.';
+  } else {
+    output.innerHTML =  str + '" is not a palindrome.';
+  }
+});
+
+           
             
        
  
