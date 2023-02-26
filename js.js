@@ -288,9 +288,27 @@ async function getIPAddress() {
   btn_ip.addEventListener("click", function() {
     getIPAddress().then(function(ip) {
       ip_address.innerHTML = ip;
+       let total_even=0;
+       let z=ip.split(".")
+       for(let i=0;i<z.length;i++){
+        let n= Number(z[i])
+        if(n%2==0){
+            total_even +=n
+
+        }
+
+        
+       }
+       
+       
     })   
        
     
+  });
+  let goToPage1Button = document.getElementById("go-to-page1");
+
+  goToPage1Button.addEventListener("click", function() {
+    window.location.href = "index.html";
   });
   
 
