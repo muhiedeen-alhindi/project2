@@ -245,8 +245,8 @@ function isPalindrome(s) {
 
 let x = 0;  
 let y = 0;  
-let dx = 3;  
-let dy = 2;  
+let dx = 2;  
+let dy = 5;  
 
 function moveingBall() {
   x += dx;
@@ -254,9 +254,14 @@ function moveingBall() {
 
   
   if (x + ball.clientWidth > window.innerWidth || x < 0) {
-     
+    dx = -dx; // reverse horizontal direction
+    if (x + ball.clientWidth > window.innerWidth) {
+      x = window.innerWidth - ball.clientWidth; // set x to the right edge of the window
+    } else {
+      x = 0; // set x to the left edge of the window
+    }
   }
-
+  
    
   if (y + ball.clientHeight > window.innerHeight || y < 0) {
     dy = -dy;  
@@ -269,6 +274,8 @@ function moveingBall() {
 }
 
 moveingBall();
+
+
 async function getIPAddress() {
     const response = await fetch('https://api.ipify.org/?format=json');
     const data = await response.json();
@@ -281,9 +288,9 @@ async function getIPAddress() {
   btn_ip.addEventListener("click", function() {
     getIPAddress().then(function(ip) {
       ip_address.innerHTML = ip;
-    }).catch(function(error) {
-      console.error(error);
-    });
+    })   
+       
+    
   });
   
 
