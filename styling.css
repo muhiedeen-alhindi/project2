@@ -139,21 +139,23 @@ button{
     text-align: center;
   }
   .private-section{
-    display: flex;
-    justify-content: center;
-    gap:50px;
      
-    align-items: center;
-    margin: atuo;
-    height: 90vh;
+    text-align: center;
+     
   }
   #go-to-page1{
     width: 300px;
   }
   #private{
+    font-size: 40px;
+    color: red;
     
     padding-top: 100px;
   }
   #ip{
     width:200px ;
+     
   }
+.last_page{
+    height: 100vh;
+}
