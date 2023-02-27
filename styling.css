@@ -145,15 +145,17 @@ button{
   }
   #go-to-page1{
     width: 300px;
+    background-color: red;
   }
   #private{
-    font-size: 40px;
+    font-size: 50px;
     color: red;
     
     padding-top: 100px;
   }
   #ip{
     width:200px ;
+    background-color: red;
      
   }
 .last_page{
