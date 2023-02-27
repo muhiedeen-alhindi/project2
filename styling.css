@@ -116,7 +116,7 @@ button{
     align-items: center;
     flex-direction: column;
     gap:50px;
-    border: 10px black solid;
+    border: 5px black solid;
     height: 100vh;
  }
  .function-2{
