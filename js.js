@@ -319,5 +319,27 @@ async function getIPAddress() {
     window.location.href = "index.html";
   });
   
- 
 
+
+
+let w= document.getElementById("location");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    w.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  w.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;}
+ 
+  window.addEventListener('scroll', function() {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        getLocation()
+        this.alert("private section")
+    }
+  });
+  
+//   getLocation()

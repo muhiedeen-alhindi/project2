@@ -141,8 +141,16 @@ button{
   .private-section{
     display: flex;
     justify-content: center;
+    gap:50px;
      
     align-items: center;
     margin: atuo;
-    height: 100vh;
+    height: 90vh;
+  }
+  #go-to-page1{
+    width: 300px;
+  }
+  #private{
+    
+    padding-top: 100px;
   }
