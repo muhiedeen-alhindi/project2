@@ -138,3 +138,11 @@ button{
   h2{
     text-align: center;
   }
+  .private-section{
+    display: flex;
+    justify-content: center;
+     
+    align-items: center;
+    margin: atuo;
+    height: 100vh;
+  }
