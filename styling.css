@@ -157,5 +157,9 @@ button{
      
   }
 .last_page{
+    background-image: url("https://media.istockphoto.com/id/644328002/photo/red-flag-warning-button-concept.jpg?s=612x612&w=0&k=20&c=mh-452DZrx0W-OFkaWf74PU-lFNnVdOHn_jnVGf4SjE=");
     height: 100vh;
+    background-size: cover;
+  background-repeat: no-repeat;
+    
 }
