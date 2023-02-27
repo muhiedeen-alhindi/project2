@@ -204,23 +204,30 @@ function isPalindrome(s) {
 
     let  normal_text=document.getElementById("reverse-word") 
     let reverse_text=document.getElementById("rev-word-output")
-     function reverseWord(w){
-        if(w.length ==0){
-            return w
-        }
-        if(w.length ==1){
-            return   w;
+    function reverseDigits(str) {
+        let number = str.match(/\d+/g)[0];  
+        let numbers_array = number.split('');  
+        numbers_array.reverse();  
+        let reversed_number =numbers_array.join('');  
+        return str.replace(/\d+/g, reversed_number);  
+      }
+    //  function reverseWord(w){
+    //     if(w.length ==0){
+    //         return w
+    //     }
+    //     if(w.length ==1){
+    //         return   w;
         
-        }
-        return reverseWord(w.substr(1))+w[0]
+    //     }
+    //     return reverseWord(w.substr(1))+w[0]
 
 
-     }
+    //  }
 
 
       normal_text.addEventListener("blur",function(){
        let x=normal_text.value
-       z=reverseWord(x)
+       z=reverseDigits(x)
        reverse_text.innerHTML=z;
        
       });
